@@ -1,2 +1,0 @@
-#compdef development
-_files -W $HOME/Development -/

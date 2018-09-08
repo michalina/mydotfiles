@@ -1,2 +1,0 @@
-#compdef rhoml
-_files -W $HOME/Development/rhoml -/

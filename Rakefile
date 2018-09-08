@@ -3,25 +3,17 @@
 
 task :default => [:backup_dir, :backup, :link]
 
+#Update these paths
+
 WHOAMI = ENV['USER']
 DOTFILES_DIR = "/Users/#{WHOAMI}/.dotfiles"
 BACKUP_DIR = "/Users/#{WHOAMI}/.dotfiles-backup"
 DOTFILES = %w(
   Brewfile
-  curlrc
-  dockerignore
   gemrc
   gitignore
   gitconfig
   gitcookies
-  gitmessage
-  mrconfig
-  mrtrust
-  siegerc
-  spacemacs
-  ssh
-  tmux.conf
-  wgetrc
   zprofile
   zsh.d
   zshrc
@@ -58,4 +50,3 @@ desc %(Create backup dir)
 task :backup_dir do
   mkdir_p BACKUP_DIR unless File.directory?(BACKUP_DIR)
 end
-
